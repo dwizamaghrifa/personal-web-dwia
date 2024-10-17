@@ -133,12 +133,16 @@
     max-height: 0; 
     overflow: hidden;
     transition: max-height 0.3s ease;
-    margin-top: 10px; /* Menjaga jarak saat terbuka */
+    margin-top: 10px; 
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;
+    border-radius: 5px;       
+    padding: 15px;            
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Ketika elemen aktif, gunakan kelas tambahan */
 .synopsis.open {
-    max-height: 500px; /* Sesuaikan dengan tinggi maksimal yang diperlukan */
+    max-height: 500px; 
 }
 
 
@@ -150,6 +154,13 @@
             border: 1px solid #ccc;
             margin-bottom: 15px;
         }
+        .message-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;    
+        margin-top: 20px;      
+        }
+
         .message-list {
             text-align: center;
             margin-top: 20px;
