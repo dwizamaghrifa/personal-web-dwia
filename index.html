@@ -9,14 +9,15 @@
         body {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             min-height: 100vh;
-            font-family: 'Poppins', Quicksand;
+            font-family: 'Poppins', sans-serif;
             background-color: #e7f1f8;
             color: #333;
             text-align: center;
             margin: 0;
             padding: 0;
+            padding-top: 20px;
         }
         .container {
             max-width: 900px;
@@ -30,16 +31,6 @@
         .container:hover {
             transform: scale(1.03);
         }
-        @media (max-width: 600px) {
-        .container {
-        padding: 20px; 
-        }
-        .profile-img {
-        width: 100px; 
-        height: 100px;
-    }
-}
-
         .profile-img {
             width: 150px;
             height: 150px;
@@ -49,19 +40,11 @@
             border: 5px solid #FFF6F0;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
         h1, h2 {
             color: #005f73;
         }
         p {
-            font-family: 'QSuicksand', Quicksand;
+            font-family: 'Quicksand', sans-serif;
             line-height: 1.6;
             color: #131010;
         }
@@ -124,22 +107,18 @@
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: relative;
             display: flex;
             align-items: center;
-            flex-direction: column; /* Menambahkan flex-direction untuk penataan */
-        }
-        .reading-list button {
-            margin-top: 10px; 
+            flex-direction: column; 
         }
         .reading-list img {
             width: 120px;
             height: 120px;
-            margin-right: 15px;
+            margin-bottom: 10px;
             border-radius: 5px;
         }
         .synopsis {
-            font-family: 'Quicksand', Quicksand;
+            font-family: 'Quicksand', sans-serif;
             display: none;
             background: #F9F9F9;
             padding: 10px;
@@ -147,65 +126,69 @@
             margin-top: 10px;
             box-shadow: 0 1px 3px rgba(6, 6, 6, 0.1);
         }
-        .reading-list h3 {
-            margin-bottom: 10px; /* Jarak antara judul dan button */
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
         }
-       
-textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
-}
-.message-list {
-    text-align: left;
-    margin-top: 20px;
-}
-.message-list div {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-}
+        .message-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .message-list div {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px; 
+            }
+            .profile-img {
+                width: 100px; 
+                height: 100px;
+            }
+            .gallery img {
+                width: 150px;
+                height: 100px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-      
         <img src="dwizaprofil.jpg" alt="Profile Picture" class="profile-img">
         <h1>Dwiza Faatihathu Maghrifa</h1>
         <p>~ Hi! Thanks for visiting my personal website—I'm happy to see you here! 💖 ~</p>
         <p>Here you can find more about me, read my blog, and connect with me on LinkedIn and GitHub. ✨</p>
-    
 
-       <h2>About Me</h2>
+        <h2>About Me</h2>
         <p>I am a student at Universitas Malikussaleh studying Information Systems. I enjoy writing, coding, and reading, and I am currently in the process of learning. I am also the founder of a free reading stall called @anginkata.id.</p>
 
         <h2>Blog</h2>
         <p>Check out my blog posts on:</p>
         <a href="https://www.blogger.com/profile/06333159003761023054" target="_blank" class="btn">Visit My Blog</a>
         
-       <h2>Connect with Me</h2>
-<div class="icon-link">
-    <a href="https://www.linkedin.com/in/dwiza-faatihathu-maghrifa-8048a92b4/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn Logo" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;">
-        My LinkedIn Profile
-    </a>
-    <a href="https://github.com/DwizaFaatihathu" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;">
-        My GitHub Profile
-    </a>
-    <a href="https://instagram.com/anginkata.id" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;">
-        Instagram @anginkata.id
-    </a>
-</div>
-
-
+        <h2>Connect with Me</h2>
+        <div class="icon-link">
+            <a href="https://www.linkedin.com/in/dwiza-faatihathu-maghrifa-8048a92b4/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn Logo" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;">
+                My LinkedIn Profile
+            </a>
+            <a href="https://github.com/DwizaFaatihathu" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;">
+                My GitHub Profile
+            </a>
+            <a href="https://instagram.com/anginkata.id" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" style="width: 20px; height: auto; vertical-align: middle; margin-right: 5px;">
+                Instagram @anginkata.id
+            </a>
         </div>
-        
+
         <h2>📚 Reading List 📚</h2>
         <div class="reading-list">
             <ul>
@@ -317,6 +300,7 @@ textarea {
             <img src="d.jpg" alt="Photo 3">
             <img src="ldff.jpg" alt="Photo 4">
         </div>
+        
         <h2>📝 Leave a Message! 📝</h2>
         <h6><p>Halloo, punya pesan buat aku? silakan tulis di sini. Semua aman dan anonim, jadi tulislah sesukamu. </p>
             <p>Aku excited buat baca 💌 </p> </h6>
